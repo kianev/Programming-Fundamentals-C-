@@ -10,9 +10,8 @@ namespace _01.Greeting
     {
         static void Main(string[] args)
         {
-            Console.Write("What is your name bitch?");
             var name = Console.ReadLine();
-            Console.WriteLine("Hello ${0}! ", name);
+            Console.WriteLine("Hello, {0}! ", name);
         }
     }
 }
