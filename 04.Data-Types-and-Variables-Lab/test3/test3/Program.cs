@@ -11,7 +11,7 @@ namespace _05.SpecialNumbers
 
             for (int i = 1; i <= n; i++)
             {
-                int currentNum = i;
+               int currentNum = i;
                 while (i > 0)
                 {
                     sum += i % 10;
