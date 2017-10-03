@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.MathPower", "7.MathPower\7.MathPower.csproj", "{4AEC2EC7-B0AE-4E4E-ADAE-424D5DCBD587}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AEC2EC7-B0AE-4E4E-ADAE-424D5DCBD587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AEC2EC7-B0AE-4E4E-ADAE-424D5DCBD587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AEC2EC7-B0AE-4E4E-ADAE-424D5DCBD587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AEC2EC7-B0AE-4E4E-ADAE-424D5DCBD587}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3218CD3-E442-4553-8222-652EC10738FB}
+	EndGlobalSection
+EndGlobal
