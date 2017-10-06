@@ -1,0 +1,7 @@
+How to read array from the console:
+
+ int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+ int[] arr = Console.ReadLine().Split(' ').Select(s => int.Parse(s).ToArray();
+with empty entries:
+ int[] arr = Console.ReadLine().Split(new char[] { ' ' },
+                StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
