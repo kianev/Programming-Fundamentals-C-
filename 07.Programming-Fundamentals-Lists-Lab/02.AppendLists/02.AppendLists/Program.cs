@@ -8,24 +8,16 @@ namespace _02.AppendLists
     {
         private static void Main(string[] args)
         {
-            var lists = Console.ReadLine()
-                .Split('|')
-                .ToList();
+            string[] lists = Console.ReadLine().Split('|');
 
-            List<string> result = new List<string>();
+            List<int> result = new List<int>();
 
-            for (int i = lists.Count - 1; i >= 0; i--)
+            for (int i = lists.Length - 1; i >= 0; i--)
             {
-                var spaceRemoved = new List<string>();
-                spaceRemoved = lists[i].Split(' ').ToList();
+                int[] list = lists[i].Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries)
+                     .Select(int.Parse).ToArray();
 
-                foreach (var item in spaceRemoved)
-                {
-                    if (item != "")
-                    {
-                        result.Add(item);
-                    }
-                }
+                result.AddRange(list);
             }
 
             Console.WriteLine(string.Join(" ", result));

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82AF7DB1-EFCF-4B49-B233-F02F26D919AC}</ProjectGuid>
+    <ProjectGuid>{EAAF2A9B-42DB-48DE-BC9D-4B27B9AF83E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02.AppendLists</RootNamespace>
-    <AssemblyName>02.AppendLists</AssemblyName>
+    <RootNamespace>_4.SplitbyWordCasing</RootNamespace>
+    <AssemblyName>4.SplitbyWordCasing</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

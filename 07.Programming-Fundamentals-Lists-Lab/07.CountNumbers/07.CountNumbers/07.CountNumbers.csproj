@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82AF7DB1-EFCF-4B49-B233-F02F26D919AC}</ProjectGuid>
+    <ProjectGuid>{E39B5EB7-3608-487C-B3A0-A1711A049753}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02.AppendLists</RootNamespace>
-    <AssemblyName>02.AppendLists</AssemblyName>
+    <RootNamespace>_07.CountNumbers</RootNamespace>
+    <AssemblyName>07.CountNumbers</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
