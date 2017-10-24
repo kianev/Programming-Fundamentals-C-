@@ -8,41 +8,37 @@ namespace _03.AMinerTask
     {
         private static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            int count = 0;
-            string ore = "";
+            String[] input = File.ReadAllLines("input.txt");
 
-            var ores = new Dictionary<string, long>();
+            Dictionary<string, long> ores = new Dictionary<string, long>();
+            File.Delete("output.txt");
 
-            while (input != "stop")
+            for (int i = 0; i < input.Length; i += 2)
             {
-                count++;
-
-                if (count % 2 != 0)
+                if (input[i] == "stop" || input[i + 1] == "stop")
                 {
-                    ore = input;
-                    if (!ores.ContainsKey(input))
-                    {
-                        ores[input] = 0;
-                    }
+                    break;
                 }
 
-                if (count % 2 == 0)
+                var ore = input[i];
+                Console.WriteLine(ore);
+                long quantity = long.Parse(input[i + 1]);
+
+                if (!ores.ContainsKey(ore))
                 {
-                    ores[ore] += long.Parse(input);
+                    ores.Add(ore, 0);
                 }
 
-                input = Console.ReadLine();
+                ores[ore] += quantity;
             }
 
-            if (input == "stop")
+            File.WriteAllText("output.txt", "");
+
+            foreach (var item in ores)
             {
-                foreach (var pair in ores)
-                    Console.WriteLine("{0} -> {1}",
-                      pair.Key, pair.Value);
+                var line = $"{item.Key} -> {item.Value}" + Environment.NewLine;
+                File.AppendAllText("output.txt", line);
             }
-
-           
         }
     }
 }
