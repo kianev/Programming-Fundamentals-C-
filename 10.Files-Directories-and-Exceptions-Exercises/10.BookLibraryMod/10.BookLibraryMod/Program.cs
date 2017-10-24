@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.IO;
+using System.Linq;
 
 namespace _05.BookLibrary
 {
@@ -24,25 +24,23 @@ namespace _05.BookLibrary
 
             Library library = new Library { Name = "Library", Books = books };
 
-            Dictionary<string, decimal> authors = new Dictionary<string, decimal>();
+            DateTime date = DateTime.ParseExact(inputFile[inputFile.Length - 1], "d.M.yyyy", CultureInfo.InvariantCulture);
+
+            Dictionary<string, DateTime> booksByDate = new Dictionary<string, DateTime>();
 
             foreach (Book book in library.Books)
             {
-                if (authors.ContainsKey(book.Author))
+                if (book.ReleaseDate.CompareTo(date) > 0)
                 {
-                    authors[book.Author] += book.Price;
-                }
-                else
-                {
-                    authors[book.Author] = book.Price;
+                    booksByDate.Add(book.Title, book.ReleaseDate);
                 }
             }
 
             File.WriteAllText("output.txt", "");
 
-            foreach (var pair in authors.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
+            foreach (var pair in booksByDate.OrderBy(x => x.Value).ThenBy(x => x.Key))
             {
-                string output = $"{pair.Key} -> {pair.Value}" + Environment.NewLine;
+                string output = $"{pair.Key} -> {pair.Value:dd.MM.yyyy}" + Environment.NewLine;
                 File.AppendAllText("output.txt", output);
             }
         }
