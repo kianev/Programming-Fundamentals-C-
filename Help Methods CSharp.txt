@@ -5,3 +5,6 @@ How to read array from the console:
 with empty entries:
  int[] arr = Console.ReadLine().Split(new char[] { ' ' },
                 StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+
+// split by (', ')
+var players = Regex.Split(Console.ReadLine(), @"\s*,\s*");
